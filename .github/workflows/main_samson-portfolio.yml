@@ -26,12 +26,16 @@ jobs:
           npm install
           npm run build --if-present
           npm run test --if-present
+
+      - name: Create ZIP Archive
+        run: |
+          tar -czf release.tar.gz .next public node_modules package.json package-lock.json
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: node-app
-          path: .
+          name: nextjs-app
+          path: release.tar.gz
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,8 +50,13 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: node-app
+          name: nextjs-app
+          path: ./download
       
+      - name: Unzip Build Artifact
+        run: |
+          tar -xzf ./download/release.tar.gz -C ./download
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -61,5 +70,5 @@ jobs:
         with:
           app-name: 'samson-portfolio'
           slot-name: 'Production'
-          package: .
+          package: ./download
           
