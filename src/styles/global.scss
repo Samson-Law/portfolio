@@ -1,0 +1,21 @@
+html {
+  height: 100vh;
+}
+body {
+  display: flex;
+  flex: 1;
+  min-height: 100%;
+}
+.wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-end;
+  transition: all 0.2s ease-in-out;
+  main {
+    flex: 1;
+    padding: 24px;
+    width: 100%;
+  }
+}
