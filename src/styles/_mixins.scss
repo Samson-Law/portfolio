@@ -1,0 +1,15 @@
+@mixin scrollbar {
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar {
+    background: transparent;
+    height: 4px;
+    width: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: $color-heather;
+  }
+}
