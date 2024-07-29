@@ -27,15 +27,18 @@ jobs:
           npm run build --if-present
           npm run test --if-present
 
-      - name: Create ZIP Archive
-        run: |
-          tar -czf release.tar.gz .next public node_modules package.json package-lock.json
+     # Zip the build directory
+      - name: Zip Release
+        uses: TheDoctor0/zip-release@0.6.1
+        with:
+          filename: release.zip
+          path: ./build/*
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: nextjs-app
-          path: release.tar.gz
+          name: node-app
+          path: release.zip
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,24 +53,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: nextjs-app
-          path: ./download
-      
-      - name: Unzip Build Artifact
-        run: |
-          tar -xzf ./download/release.tar.gz -C ./download
-
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_16522ABFB2CD42729675390F10055BE7 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_42F8E7AA8A62456097315002B23C09E8 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4CCCEE164DD944DBB4181DEB0CBCDAB3 }}
-
-      - name: Deploy to Azure Web App using Azure CLI
-        run: |
-          az login --service-principal -u ${{ secrets.AZUREAPPSERVICE_CLIENTID }} -p ${{ secrets.AZUREAPPSERVICE_CLIENTSECRET }} --tenant ${{ secrets.AZUREAPPSERVICE_TENANTID }}
-          az webapp deployment source config-zip --resource-group <resource-group-name> --name <app-name> --src ./download/release.tar.gz
+          name: node-app
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
@@ -75,5 +61,5 @@ jobs:
         with:
           app-name: 'samson-portfolio'
           slot-name: 'Production'
-          package: ./download
+          package: release.zip
           
