@@ -21,6 +21,13 @@ header.headerBarContainer {
       align-items: center;
       gap: 8px;
       height: 100%;
+      label {
+        margin: 0;
+        button {
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 }
