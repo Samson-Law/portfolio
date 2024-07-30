@@ -1,12 +1,45 @@
 .projectListContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   grid-gap: 24px 16px;
   overflow: unset;
-
   .projectTile {
     border-radius: 10px;
     border: 1px solid $color-geyser;
     box-shadow: 0px 0px 10px 0px rgba(15, 107, 101, 0.23);
+    padding: 16px 16px 0;
+    .img {
+      cursor: pointer;
+    }
+    .bar {
+      & > div:last-child {
+        display: flex;
+        align-items: center;
+        svg {
+          cursor: pointer;
+          font-size: 24px;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+.modalBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: $color-white;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: 80%;
+  width: 80%;
+  padding: 16px;
+  outline: none !important;
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  > div {
+    flex: 1;
+  }
+  video {
+    height: calc(100% - 40px);
   }
 }
