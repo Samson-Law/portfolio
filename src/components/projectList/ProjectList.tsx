@@ -1,9 +1,9 @@
 'use client';
 
 import styles from '@Components/projectList/ProjectList.module.scss';
-import { Box, CardMedia, ImageListItemBar, Modal, Typography } from '@mui/material';
+import { Box, CardMedia, ImageListItemBar, Modal } from '@mui/material';
 import { useCallback, useState } from 'react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,6 +12,7 @@ import 'swiper/css/scrollbar';
 import { right } from '@popperjs/core';
 import LaunchIcon from '@mui/icons-material/Launch';
 import LinkIcon from '@mui/icons-material/Link';
+import Image from 'next/image';
 
 const ProjectList = () => {
   const [projectName, setProjectName] = useState('');
@@ -30,32 +31,16 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/sellerCenter/SellerCenter_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/sellerCenter/SellerCenter_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/sellerCenter/SellerCenter_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/sellerCenter/SellerCenter_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/sellerCenter/SellerCenter_website_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/sellerCenter/SellerCenter_website_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/sellerCenter/SellerCenter_website_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/sellerCenter/SellerCenter_website_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
       )
@@ -63,89 +48,43 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/gherkinEdm/Hitachi_gherkin_edm_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/gherkinEdm/Hitachi_gherkin_edm_1.jpg`} alt="" width={1324} height={745} loading="lazy"/>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/gherkinEdm/Hitachi_gherkin_edm_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/gherkinEdm/Hitachi_gherkin_edm_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/emeaEdm/Hitachi_emea_edm_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/emeaEdm/Hitachi_emea_edm_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/emeaEdm/Hitachi_emea_edm_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/emeaEdm/Hitachi_emea_edm_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <CardMedia
-                component="video"
-                image='/assets/video/hitachi_display.mp4'
-                title='title'
-                controls
-              />  
+              <iframe  
+                width="100%" 
+                height="95%" 
+                src="https://www.youtube.com/embed/fmhkull0uBc?rel=0" ></iframe>
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/ebook/Hitachi_ebook_2_html5_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/ebook/Hitachi_ebook_2_html5_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/ebook/Hitachi_ebook_flash_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/ebook/Hitachi_ebook_flash_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hitachi/ebook/Hitachi_ebook_html5_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hitachi/ebook/Hitachi_ebook_html5_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
       )
@@ -153,12 +92,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <CardMedia
-                component="video"
-                image='/assets/video/BT_business_video.mp4'
-                title='title'
-                controls
-              />  
+              <iframe  
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/sj9A6bIZUrc?rel=0" ></iframe>
             </SwiperSlide>
         </>
       )
@@ -166,74 +103,34 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/roadshow/Canon_roadshow_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/roadshow/Canon_roadshow_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/roadshow/Canon_roadshow_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/roadshow/Canon_roadshow_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/roadshow/Canon_roadshow_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/roadshow/Canon_roadshow_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/roadshow/Canon_roadshow_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/roadshow/Canon_roadshow_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/infographic/Canon_infographic_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/infographic/Canon_infographic_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/infographic/Canon_infographic_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/infographic/Canon_infographic_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                 src={`/assets/images/project/canon/infographic/Canon_infographic_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/infographic/Canon_infographic_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                 src={`/assets/images/project/canon/infographic/Canon_infographic_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/infographic/Canon_infographic_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/edm/Canon_roadshow_EDM_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/edm/Canon_roadshow_EDM_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/canon/edm/Canon_roadshow_EDM_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/canon/edm/Canon_roadshow_EDM_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -241,67 +138,31 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_1.jpg`} alt="" width={1324} height={745} loading="lazy"  />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_2.jpg`} alt="" width={1324} height={745} loading="lazy"  />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/flashBanner/Panasonic_flash_banner_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/flashBanner/Panasonic_flash_banner_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/panasonic/toughpad/Panasonic_toughpad_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -309,46 +170,22 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/parago/chilli/parago_chilli_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/parago/chilli/parago_chilli_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/parago/chilli/parago_chilli_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/parago/chilli/parago_chilli_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/parago/chilli/parago_chilli_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/parago/chilli/parago_chilli_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/parago/chilli/parago_chilli_4.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/parago/chilli/parago_chilli_4.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/parago/ebook/parago_ebook_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/parago/ebook/parago_ebook_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/parago/christmasCard/Parago_christmas_card_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/parago/christmasCard/Parago_christmas_card_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -356,18 +193,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/lexmark/Lexmark_microsite_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/lexmark/Lexmark_microsite_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/lexmark/Lexmark_microsite_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/lexmark/Lexmark_microsite_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -375,25 +204,13 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/kfc/KFC_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/kfc/KFC_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/kfc/KFC_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/kfc/KFC_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/kfc/KFC_website_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/kfc/KFC_website_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -401,25 +218,13 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/lac/LAC_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/lac/LAC_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/lac/LAC_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/lac/LAC_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/lac/LAC_website_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/lac/LAC_website_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -427,18 +232,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/clp/CLP_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/clp/CLP_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/clp/CLP_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/clp/CLP_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -446,18 +243,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/mfw/MFW_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/mfw/MFW_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/mfw/MFW_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/mfw/MFW_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -465,18 +254,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/worldExpo/WorldExpo_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/worldExpo/WorldExpo_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/worldExpo/WorldExpo_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/worldExpo/WorldExpo_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -484,18 +265,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/yata/Yata_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/yata/Yata_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/yata/Yata_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/yata/Yata_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -503,18 +276,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/sfc/SFC_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/sfc/SFC_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/sfc/SFC_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/sfc/SFC_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -522,25 +287,13 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/polyUPA/PolyUPA_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/polyUPA/PolyUPA_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/polyUPA/PolyUPA_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/polyUPA/PolyUPA_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/polyUPA/PolyUPA_website_3.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/polyUPA/PolyUPA_website_3.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -548,18 +301,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hkuSpace/HKUSPACE_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hkuSpace/HKUSPACE_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/hkuSpace/HKUSPACE_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/hkuSpace/HKUSPACE_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -567,18 +312,10 @@ const ProjectList = () => {
         return (
           <>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/galleria/Galleria_website_1.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/galleria/Galleria_website_1.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
             <SwiperSlide>
-              <img
-                src={`/assets/images/project/galleria/Galleria_website_2.jpg`}
-                alt={''}
-                loading="lazy"
-              />
+              <Image src={`/assets/images/project/galleria/Galleria_website_2.jpg`} alt="" width={1324} height={745} loading="lazy" />
             </SwiperSlide>
         </>
         )
@@ -592,11 +329,7 @@ const ProjectList = () => {
       <div className={styles.projectListContainer}>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('sellerCenter')}>
-            <img
-              src={`/assets/images/project/sellerCenter/SellerCenter_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/sellerCenter/SellerCenter_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -608,11 +341,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>window.open('https://www.fortress.com.hk/en', "_blank")}>
-            <img
-              src={`/assets/images/project/fortress/Fortress_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/fortress/Fortress_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -624,11 +353,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>window.open('https://www.watsons.com.hk/en', "_blank")}>
-            <img
-              src={`/assets/images/project/watsons/Watsons_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/watsons/Watsons_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -640,11 +365,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>window.open('https://www.pns.hk/en', "_blank")}>
-            <img
-              src={`/assets/images/project/pnshk/Pnshk_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/pnshk/Pnshk_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -656,11 +377,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>window.open('https://www.watsonswine.com', "_blank")}>
-            <img
-              src={`/assets/images/project/watsonsWine/WatsonsWine_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/watsonsWine/WatsonsWine_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -672,11 +389,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('hitachi')}>
-            <img
-              src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/hitachi/roadshow/Hitachi_roadshow_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -688,11 +401,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('bt')}>
-            <img
-              src={`/assets/images/project/bt/BT_business_video_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/bt/BT_business_video_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -704,11 +413,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('canon')}>
-            <img
-              src={`/assets/images/project/canon/roadshow/Canon_roadshow_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/canon/roadshow/Canon_roadshow_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -720,11 +425,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('panasonic')}>
-            <img
-              src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/panasonic/campaign/Panasonic_campaign_microsite_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -736,11 +437,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('parago')}>
-            <img
-              src={`/assets/images/project/parago/chilli/parago_chilli_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/parago/chilli/parago_chilli_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -752,11 +449,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('lexmark')}>
-            <img
-              src={`/assets/images/project/lexmark/Lexmark_microsite_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/lexmark/Lexmark_microsite_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -768,11 +461,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('kfc')}>
-            <img
-              src={`/assets/images/project/kfc/KFC_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/kfc/KFC_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -784,11 +473,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('lac')}>
-            <img
-              src={`/assets/images/project/lac/LAC_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/lac/LAC_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -800,11 +485,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('clp')}>
-            <img
-              src={`/assets/images/project/clp/CLP_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/clp/CLP_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -816,11 +497,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('mfw')}>
-            <img
-              src={`/assets/images/project/mfw/MFW_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/mfw/MFW_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -832,11 +509,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('worldExpo')}>
-            <img
-              src={`/assets/images/project/worldExpo/WorldExpo_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/worldExpo/WorldExpo_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -848,11 +521,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('yata')}>
-            <img
-              src={`/assets/images/project/yata/Yata_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/yata/Yata_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -864,11 +533,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('sfc')}>
-            <img
-              src={`/assets/images/project/sfc/SFC_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/sfc/SFC_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -880,11 +545,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('polyUPA')}>
-            <img
-              src={`/assets/images/project/polyUPA/PolyUPA_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/polyUPA/PolyUPA_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -896,11 +557,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('hkuSpace')}>
-            <img
-              src={`/assets/images/project/hkuSpace/HKUSPACE_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/hkuSpace/HKUSPACE_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
@@ -912,11 +569,7 @@ const ProjectList = () => {
         </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('galleria')}>
-            <img
-              src={`/assets/images/project/galleria/Galleria_website_0.jpg`}
-              alt={''}
-              loading="lazy"
-            />
+            <Image src={`/assets/images/project/galleria/Galleria_website_0.jpg`} alt="" width={1168} height={656} loading="lazy" />
           </div>
           <ImageListItemBar
             className={styles.bar}
