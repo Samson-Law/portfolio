@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { right } from '@popperjs/core';
 import LaunchIcon from '@mui/icons-material/Launch';
+import LinkIcon from '@mui/icons-material/Link';
 
 const ProjectList = () => {
   const [projectName, setProjectName] = useState('');
@@ -25,6 +26,39 @@ const ProjectList = () => {
 
   const renderContent = useCallback(() => {
     switch(projectName) {
+      case 'sellerCenter': 
+        return (
+          <>
+            <SwiperSlide>
+              <img
+                src={`/assets/images/project/sellerCenter/SellerCenter_website_1.jpg`}
+                alt={''}
+                loading="lazy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={`/assets/images/project/sellerCenter/SellerCenter_website_2.jpg`}
+                alt={''}
+                loading="lazy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={`/assets/images/project/sellerCenter/SellerCenter_website_3.jpg`}
+                alt={''}
+                loading="lazy"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={`/assets/images/project/sellerCenter/SellerCenter_website_4.jpg`}
+                alt={''}
+                loading="lazy"
+              />
+            </SwiperSlide>
+        </>
+      )
       case 'hitachi': 
         return (
           <>
@@ -556,6 +590,86 @@ const ProjectList = () => {
   return (
     <>
       <div className={styles.projectListContainer}>
+        <div className={styles.projectTile}>
+          <div className={styles.img} onClick={()=>handleModal('sellerCenter')}>
+            <img
+              src={`/assets/images/project/sellerCenter/SellerCenter_website_0.jpg`}
+              alt={''}
+              loading="lazy"
+            />
+          </div>
+          <ImageListItemBar
+            className={styles.bar}
+            title={'Seller Center'}
+            actionIcon={<LaunchIcon onClick={()=>handleModal('sellerCenter')} />}
+            actionPosition={right}
+            position="below"
+          />
+        </div>
+        <div className={styles.projectTile}>
+          <div className={styles.img} onClick={()=>window.open('https://www.fortress.com.hk/en', "_blank")}>
+            <img
+              src={`/assets/images/project/fortress/Fortress_website_0.jpg`}
+              alt={''}
+              loading="lazy"
+            />
+          </div>
+          <ImageListItemBar
+            className={styles.bar}
+            title={'Fortress'}
+            actionIcon={<LinkIcon onClick={()=>window.open('https://www.fortress.com.hk/en', "_blank")} />}
+            actionPosition={right}
+            position="below"
+          />
+        </div>
+        <div className={styles.projectTile}>
+          <div className={styles.img} onClick={()=>window.open('https://www.watsons.com.hk/en', "_blank")}>
+            <img
+              src={`/assets/images/project/watsons/Watsons_website_0.jpg`}
+              alt={''}
+              loading="lazy"
+            />
+          </div>
+          <ImageListItemBar
+            className={styles.bar}
+            title={'Watsons'}
+            actionIcon={<LinkIcon onClick={()=>window.open('https://www.watsons.com.hk/en', "_blank")} />}
+            actionPosition={right}
+            position="below"
+          />
+        </div>
+        <div className={styles.projectTile}>
+          <div className={styles.img} onClick={()=>window.open('https://www.pns.hk/en', "_blank")}>
+            <img
+              src={`/assets/images/project/pnshk/Pnshk_website_0.jpg`}
+              alt={''}
+              loading="lazy"
+            />
+          </div>
+          <ImageListItemBar
+            className={styles.bar}
+            title={'PARKnSHOP'}
+            actionIcon={<LinkIcon onClick={()=>window.open('https://www.pns.hk/en', "_blank")} />}
+            actionPosition={right}
+            position="below"
+          />
+        </div>
+        <div className={styles.projectTile}>
+          <div className={styles.img} onClick={()=>window.open('https://www.watsonswine.com', "_blank")}>
+            <img
+              src={`/assets/images/project/watsonsWine/WatsonsWine_website_0.jpg`}
+              alt={''}
+              loading="lazy"
+            />
+          </div>
+          <ImageListItemBar
+            className={styles.bar}
+            title={"Watson's Wine"}
+            actionIcon={<LinkIcon onClick={()=>window.open('https://www.watsonswine.com', "_blank")} />}
+            actionPosition={right}
+            position="below"
+          />
+        </div>
         <div className={styles.projectTile}>
           <div className={styles.img} onClick={()=>handleModal('hitachi')}>
             <img
