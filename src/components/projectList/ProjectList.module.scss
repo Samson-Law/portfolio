@@ -3,6 +3,11 @@
   grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   grid-gap: 24px 16px;
   overflow: unset;
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
+  }
+
   .projectTile {
     border-radius: 10px;
     border: 1px solid $color-geyser;
@@ -31,13 +36,21 @@
   background-color: $color-white;
   transform: translate(-50%, -50%);
   display: flex;
-  height: 80%;
-  width: 80%;
+  height: auto;
+  width: 90%;
   padding: 16px;
   outline: none !important;
   box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
   > div {
     flex: 1;
+    & > div {
+      &:first-child {
+        aspect-ratio: 2 / 1;
+      }
+      &:last-child {
+        transform: translateY(7px);
+      }
+    }
   }
   video {
     height: calc(100% - 40px);
