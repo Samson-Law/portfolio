@@ -15,7 +15,11 @@ const Header = () => {
     <AppBar ref={headerRef} className={styles.headerBarContainer}>
       <Toolbar className={styles.headerToolbar}>
         <Box className={styles.headerLeft}>
-          Samson Portfolio
+          <img
+            src={`/assets/images/Samson_Law_Logo.svg`}
+            alt={''}
+            loading="lazy"
+          />
         </Box>
         <Box sx={{ flexGrow: 1 }} />
         <Box className={styles.headerRight}>
